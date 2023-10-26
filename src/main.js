@@ -4,11 +4,14 @@ Rocket Patrol Rethought
 
 Modifications:
 1 pt:
-Added Background Audio into Assets (Cred Youtube @jayu. Obtained full usage permission with his consent.)
+- Added Background Audio into Assets (Cred Youtube @jayu. Obtained full usage permission with his consent.)
 3 pt:
-New Title Screen (Cred W3 Schools)
+- New Title Screen (Cred W3 Schools)
+- Created 4 New Explosion Sounds, Implemented Logic for them, but It Freezes the game?? Comments left in Play.js
 
 Stopped before I broke anything else.
+Previous Repo to view commits before I messed up my Repo somehow ??????
+https://github.com/wntsai/ModdedRocketPatrol
 */
 let config = {
     type: Phaser.AUTO,

@@ -8,7 +8,7 @@ class Play extends Phaser.Scene{
         this.load.image('rocket', './assets/rocket.png');
         this.load.image('spaceship', './assets/spaceship.png');
         this.load.image('starfield', './assets/starfield.png');
-        //this.load.sound('backgorund', './assets/runnermusic.mp3')
+        this.load.audio('sfx_explosion', './assets/explosion38.wav');
         //load spritesheet
         this.load.spritesheet('explosion', './assets/explosion.png', {frameWidth: 64, frameHeight: 32, startFrame: 0, endFrame: 9});
     }
@@ -131,6 +131,10 @@ class Play extends Phaser.Scene{
         }
     }
 
+    //Function to Randomize Number Selection from 1-4
+    /*intrandomer(x) {
+        return Math.floor(Math.random() * 5);
+    }*/
     shipExplode(ship){
         //temporarily hide ship
         ship.alpha = 0;
@@ -145,7 +149,22 @@ class Play extends Phaser.Scene{
         //score add and repaint    
         this.p1Score += ship.points;
         this.scoreLeft.text = this.p1Score;
+        
 
-        this.sound.play('sfx_explosion');
+        //this.sound.play('sfx_explosion');
+        //Function to Play Sound Effect Based on Random Number Generator
+        //Conditional statements utilizes too much memory and freezes game?
+        //Sound Effects were custom made by me tho :p
+        /*testint = intrandomer(x);
+        if (testint = 1){
+            this.sound.play('boom');
+        } else if (testint = 2){
+            this.sound.play('err');
+        }else if (testint = 3){
+            this.sound.play('pew');
+        }else{
+            this.sound.play('waw');
+        }*/
+        
     }
 }
